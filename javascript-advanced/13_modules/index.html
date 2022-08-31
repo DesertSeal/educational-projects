@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>11 (8). JS. TODO</title>
+    <script type = "module">
+        
+        const defaultTasks = [{ name: 'Сделанная работа №1',    done: true },
+                            { name: 'Сделанная работа №2',    done: true }, 
+                            { name: 'Не сделанная работа №1', done: false}, 
+                            { name: 'Не сделанная работа №1', done: false}, ];
+
+        const owner = "Я";
+        const defaultSource = {source: 'LocalStorage'};
+        const key='source';
+
+        const switchSource = document.getElementById('switchSource')
+      
+        let getTodoList, createTodoItem, switchTodoItemDone, deleteTodoItem
+
+        if (localStorage.getItem(key) === null) localStorage.setItem(key, JSON.stringify(defaultSource));
+        let source=JSON.parse(localStorage.getItem(key)).source;
+
+        let uploadFile = (source == 'LocalStorage') ? 'apiLS' : 'apiServer';
+        console.log(uploadFile)
+        switchSource.innerHTML = 'Для хранения данных использовать '
+        switchSource.innerHTML += (source == 'LocalStorage') ? 'Server' : 'LocalStorage';
+
+        switchSource.addEventListener('click', function() {
+            source = (source == 'LocalStorage') ? 'Server' : 'LocalStorage'
+            uploadFile = (source == 'LocalStorage') ? 'apiLS' : 'apiServer'
+            switchSource.innerHTML = 'Для хранения данных использовать '
+            switchSource.innerHTML += (source == 'LocalStorage') ? 'Server' : 'LocalStorage';
+            localStorage.setItem(key, JSON.stringify({source: source}));
+            location.reload ()
+            
+            // ({ getTodoList, createTodoItem, switchTodoItemDone, deleteTodoItem } = await import(`./todo-app/${uploadFile}.js`));
+        })
+
+        import { createTodoApp } from './todo-app/view.js'
+        ({ getTodoList, createTodoItem, switchTodoItemDone, deleteTodoItem } = await import(`./todo-app/${uploadFile}.js`));
+
+  
+                            
+        (async () => {
+            const todoItemList = await getTodoList(owner);
+            createTodoApp(document.getElementById('todo-app'),{
+                title: 'Мои дела', owner, defaultTasks, todoItemList, 
+                onCreateFormSubmit: createTodoItem,
+                onDoneClick: switchTodoItemDone, onDeleteClick: deleteTodoItem,
+            });
+        })();
+        // createTodoApp(document.getElementById('todo-app'), 'Мои дела', 'myTask', defaultTasks);
+    </script>
+</head>
+
+<body>
+    <div class="container" style="display: flex; flex-direction: row; margin-top: 20px;">
+        <div class="container mb-5">
+            <nav class='nav'>
+                <a class="nav-link" href="index.html">Мои дела</a>
+                <a class="nav-link" href="dad.html">Дела папы</a>
+                <a class="nav-link" href="mom.html">Дела мамы</a>
+            </nav>
+        </div>
+        <div>
+            <button id="switchSource" style="color: #fff; background-color: #007bff; border-color: #007bff; border-radius: 10px; border: none; padding: 10px 20px;">Для хранения данных использовать Server</button>
+        </div>
+    </div>
+
+    <div id="todo-app" class="container"></div>
+</body>
+
+</html>
