@@ -1,0 +1,686 @@
+@import '../variables';
+
+.projects {
+
+	margin-bottom: 64px;
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		// grid-template-rows: 300px 300px;
+		grid-template-rows: auto auto;
+		// gap: 30px;
+		column-gap: 30px;
+		row-gap: 26px;
+	}
+
+	&__title {
+
+		margin-top: 70px;
+		margin-bottom: 15px;
+	}
+
+	&__img {
+		width: 100%;
+		// height: 100%;
+		object-fit: cover;
+	}
+
+	&__figure {
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item-1,
+	&__item-2,
+	&__item-3,
+	&__item-4,
+	&__item-5,
+	&__item-6,
+	&__item-7 {
+		position: relative;
+	}
+
+	&__item-1 {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+
+	&__item-2 {
+		grid-column: 3 / 5;
+		grid-row: 1 / 2;
+	}
+
+	&__item-3 {
+		grid-column: 5 / 7;
+		grid-row: 1 / 2;
+	}
+
+	&__item-4 {
+		grid-column: 7 / 13;
+		grid-row: 1 / 2;
+
+		margin: 0 0 0 0;	
+		width: 100%;
+		height: 98.3%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		
+		background: url(../images/1920/fuji-girl.jpg) no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	&__item-5 {
+		grid-column: 1 / 7;
+		grid-row: 2 / 3;
+
+		margin: 0 0 0 0;	
+		width: 100%;
+		height: 98.3%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		
+		background: url(../images/1920/project-oblivion.jpg) no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+
+	&__item-6 {
+		grid-column: 7 / 10;
+		grid-row: 2 / 3;
+	}
+
+	&__item-7 {
+		grid-column: 10 / 13;
+		grid-row: 2 / 3;
+	}
+
+	&__figcaption {
+		font-family: RobotoRegular;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 0em;
+		text-align: left;
+
+		color: #202020;
+
+		margin-top: 14px;
+
+		max-height: 98px;
+		overflow: hidden;
+	}
+
+	&__caption-1,
+	&__caption-2,
+	&__caption-3,
+	&__caption-6,
+	&__caption-7 {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+
+	&__caption-1,
+	&__caption-2 {
+		width: 100%;
+		max-height: 66px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__caption-1 {
+		display: inline;
+	}
+
+	&__caption-2 {
+		display: none;
+	}
+
+	&__date {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		margin-left: 1px;
+	}
+
+	&__calendar {
+		font-family: RobotoRegular, sans-serif;
+		font-size: 12px;
+		line-height: 22px;
+		color: #999;
+		margin-left: 6px;
+	}
+
+	&__big-calendar {
+		color: #FFFFFF;
+	}
+
+	&__big-date {
+		margin: 21px 0px 2px 31px;
+	}
+
+
+	&__big-title {
+		font-family: TTFirsNeueBold;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0;
+		text-align: left;
+		color: #FFFFFF;
+		width: 245px;
+
+		margin: 0px 0 6px 29px;
+	}
+
+	&__big-text {
+		font-family: RobotoRegular;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 22px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #FFFFFF;
+		width: 295px;
+		margin: 0 0 9% 29px;
+	}
+
+	&__teg {
+		position: absolute;
+		padding: 7px 14px 5px 14px;
+		top: 7px;
+		right: 7px;
+	}
+
+
+	&__button {
+		padding: 13px 20px;
+		margin: 0px auto 35px 30px;
+		transition: 0.3s ease;
+
+		&:hover {
+			@include button-hover;
+		}
+
+		&:focus {
+			@include button-focus;
+		}
+
+		&:active {
+			@include button-active;
+		}
+	}
+
+	&__button_2 {
+		margin-top: 7%;
+	}
+
+}
+
+
+// @media (max-width: 1255px) {
+// 	.projects {
+
+// 	}
+
+// }
+
+
+ @media (max-width: 1192px) {
+	.projects {
+		margin-bottom: 70px;
+
+		img {
+			height: 100%;
+		}
+
+		&__grid-12 {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			// grid-template-rows: 307px 307px 307px;
+			grid-template-rows: auto auto auto;
+			gap: 30px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 4;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 4 / 7;
+			grid-row: 1 / 2;
+		}
+
+		&__item-3 {
+			grid-column: 7 / 13;
+			grid-row: 1 / 2;
+		}
+
+		&__item-4 {
+			grid-column: 1 / 8;
+			grid-row: 2 / 3;
+		}
+
+		&__item-6 {
+			grid-column: 8 / 13;
+			grid-row: 2 / 3;
+		}
+
+		&__item-7 {
+			grid-column: 1 / 6;
+			grid-row: 3 / 4;
+		}
+
+		&__item-5 {
+			grid-column: 6 / 13;
+			grid-row: 3 / 4;
+		}
+
+		&__caption-1,
+		&__caption-2,
+		&__caption-6 {
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		&__caption-3,
+		&__caption-7 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		&__button {
+			bottom: 75px;
+		}
+	}
+}
+
+
+
+@media (max-width: 1050px) {
+
+	.projects {
+		&__grid {
+			grid-template-columns: repeat(8, 1fr);
+			// grid-template-rows: 285px 307px 307px;
+			grid-template-rows: 285px minmax(auto, 307px) minmax(auto, 307px);
+			column-gap: 30px;
+			row-gap: 24px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 3 / 5;
+			grid-row: 1 / 2;
+		}
+
+		&__item-3 {
+			grid-column: 5 / 9;
+			grid-row: 1 / 2;
+		}
+
+		&__item-4 {
+			grid-column: 1 / 6;
+			grid-row: 2 / 3;
+
+			height: 100.3%;
+			background: url(../images/1024/fuji-girl.jpg) no-repeat;
+		}
+
+		&__item-5 {
+			grid-column: 4 / 9;
+			grid-row: 3 / 4;
+
+			height: 100.3%;
+			background: url(../images/1024/project-oblivion.jpg) no-repeat;
+		}
+
+		&__item-6 {
+			grid-column: 6 / 9;
+			grid-row: 2 / 3;
+		}
+
+		&__item-7 {
+			grid-column: 1 / 4;
+			grid-row: 3 / 4;
+		}
+
+
+
+		&__caption-1{
+			width: 89%;
+		}
+
+		&__caption-1,
+		&__caption-2,
+		&__caption-3 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		&__caption-6,
+		&__caption-7 {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+
+		&__date {
+			margin-top: 18px;
+		}
+
+		&__button {
+			bottom: 36px;
+
+			&_2 {
+				bottom: 29px;
+			}
+		}
+		&__figcaption {
+			overflow: unset;
+		}
+
+		&__big-date {
+			margin: 31px 0px 2px 31px;
+		}
+	
+		&__big-text {
+			font-size: 16px;
+			line-height: 22px;
+			width: 295px;
+			margin: 0 0 8% 29px;
+		}
+
+		&__button_2 {
+			margin-top: 9%;
+		}
+	}
+
+}
+
+@media (max-width: 950px) {
+	.projects {
+		&__caption-1,
+		&__caption-2,
+		&__caption-3,
+		&__caption-6,
+		&__caption-7 {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		&__date {
+			margin-top: 15px;
+		}
+
+		&__big-date {
+			margin: 31px 0px 2px 31px;
+		}
+	}
+}
+
+
+@media (max-width: 805px) {
+	.projects {
+		&__grid {
+			grid-template-columns: repeat(6, 1fr);
+			//grid-template-rows: 295px 300px 300px 301px;
+			grid-template-rows: auto minmax(auto, 300px) auto minmax(auto, 300px);
+			column-gap: 30px;
+			row-gap: 28px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		&__caption-1 {
+			// width: 102%;
+			width: 100%;
+		}
+
+		&__item-2 {
+			grid-column: 3 / 5;
+			grid-row: 1 / 2;
+		}
+
+		&__item-3 {
+			grid-column: 5 / 7;
+			grid-row: 1 / 2;
+		}
+
+		&__item-4 {
+			grid-column: 1 / 7;
+			grid-row: 2 / 3;
+			transform: translateY(-2px);
+			height: 100%;
+			background: url(../images/768/fuji-girl.jpg) no-repeat;
+		}
+
+		&__item-6 {
+			grid-column: 1 / 4;
+			grid-row: 3 / 4;
+		}
+
+		&__item-7 {
+			grid-column: 4 / 7;
+			grid-row: 3 / 4;
+		}
+
+		&__item-5 {
+			grid-column: 1 / 7;
+			grid-row: 4 / 5;
+			transform: translateY(2px);
+			height: 100%;
+			background: url(../images/768/project-oblivion.jpg) no-repeat;
+		}
+
+		&__caption-1,
+		&__caption-2,
+		&__caption-3,
+		&__caption-6,
+		&__caption-7 {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		&__caption-3 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+
+			margin-bottom: 32px;
+		}
+
+		&__big-text {
+			margin: 0 0 6.4% 29px;
+		}
+
+		&__button_2 {
+			margin-top: 6.5%;
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.projects {
+		margin-bottom: 43px;
+
+		&__grid {
+			grid-template-columns: repeat(2, 1fr);
+			// grid-template-rows: 272px 272px 272px 422px 295px 295px 422px;
+			grid-template-rows: auto auto auto auto auto auto auto;
+			gap: 22.2px;
+		}
+
+		&__title {
+			font-size: 18px;
+			margin-top: 49px;
+			margin-bottom: 15px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+		}
+
+		&__item-3 {
+			grid-column: 1 / 3;
+			grid-row: 3 / 4;
+			margin-top: 2px;
+		}
+
+		&__item-4 {
+			grid-column: 1 / 3;
+			grid-row: 4 / 5;
+			margin: 0 0 0 0;	
+			width: 100%;
+			height: 98.3%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			
+			background: url(../images/320/fuji-girl.jpg) no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+
+		}
+
+		&__item-6 {
+			grid-column: 1 / 3;
+			grid-row: 5 / 6;
+			margin-top: -1px;
+		}
+
+		&__item-7 {
+			grid-column: 1 / 3;
+			grid-row: 6 / 7;
+			margin-top: 2px;
+		}
+
+		&__item-5 {
+			grid-column: 1 / 3;
+			grid-row: 7 / 8;
+	
+			transform: translateY(2px);
+			margin: 0 0 0 0;	
+			width: 100%;
+			height: 98.3%;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			
+			background: url(../images/320/project-oblivion.jpg) no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+		}
+
+		&__teg {
+			font-size: 12px;
+			line-height: 14px;
+			padding: 4px 14px;
+			top: 6px;
+			right: 5px;
+		}
+
+
+		&__caption-1,
+		&__caption-2,
+		&__caption-3,
+		&__caption-6,
+		&__caption-7 {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			word-wrap: break-word;
+		}
+
+		&__caption-3 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			word-break: break-all;
+			margin-bottom: 13px;
+			white-space: pre-line;
+		}
+
+
+		&__button {
+			padding: 9px 19px 8px;
+			font-size: 14px;
+			margin-bottom: 37px;
+		}
+
+		&__button_2 {
+			margin-top: 2.9%;
+		}
+
+		&__date {
+			margin-top: 11px;
+		}
+
+		&__link {
+			bottom: 31px;
+			left: 29px;
+			font-size: 14px;
+			line-height: 16.5px;
+			letter-spacing: 0;
+			padding: 9px 20px 9px 19px;
+		}
+
+		&__big-date {
+			margin: 70% 0px 7px 31px;
+		}
+
+		&__big-title {
+			margin: 0px 0 10px 29px;
+		}
+
+		&__big-text {
+			font-family: RobotoRegular;
+			font-size: 14px;
+			line-height: 18px;
+			width: 220px;
+			margin: 0 0 5.5% 29px;
+		}
+	}
+
+
+}

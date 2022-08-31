@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), local('OpenSans'),
+       url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+      url('../fonts/opensansbold.woff2') format('woff2'),
+       url('../fonts/opensansbold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans-webfont.woff2') format('woff2'),
+       url('../fonts/open-sans-webfont.woff') format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+    src: url('../fonts/open-sans-bold2_1-webfont.woff2') format('woff2'),
+         url('../fonts/open-sans-bold2_1-webfont.woff') format('woff');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+} */
+
+
+
+ul{
+  list-style: none
+}
+
+body {
+  width: 1440px;
+  font-family: 'Open Sans';
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0;
+  padding: 0px 57px 0 57px;
+
+}
+.page__top{
+  background-color: #FFF6ED;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.cards{
+  background-color: #FFF6ED;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 26px;
+  margin-top: 40px;
+}
+
+
+
+h2{
+  margin-top: 0;
+  margin-bottom: 11px;
+  font-family: Open Sans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.cards__item{
+  width: 374px;
+}
+
+h3{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  margin-top: 19px;
+  margin-bottom: 0px;
+}
+
+.cards__text_orange{
+  color: orange;
+}
+.cards__text_black{
+  color: black;
+}
+
+.card__description, .social__description{
+  font-family: Open Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 5px;
+}
+.card__description{
+  width: 375px;
+}
+
+.social__description{
+  width: 575px;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.social__info{
+  width: 600px;
+  padding-top: 60px;
+}
+.social__info_header{
+  text-align: left;
+}
+
+.social__icons{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  list-style: none;
+  margin-top: 92px;
+
+  position: relative;
+  z-index: 5;
+}
+
+.social__item{
+  height: 100px;
+}
+
+.social__item:not(:nth-child(4n)) {
+  margin-right: 90px;
+}
+
+.social__item:nth-child(5n) {
+  margin-left: 70px;
+}
+
+.social__fone_semicircle{
+  position: absolute;
+  top: 660px;
+  left: 834px;
+  z-index: 1;
+}
+

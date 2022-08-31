@@ -1,0 +1,62 @@
+// @import '../variables';
+// @import '../mixins.scss';
+
+
+
+@media (max-width: 1375px){
+  .container {
+   
+    margin-left: 31px;
+    margin-right: 31px;
+  }
+    
+}
+
+
+@media (max-width: 1050px) {
+  .body {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 962px;
+    height: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-left: 31px;
+    margin-right: 31px;
+  }
+}  
+
+@media (max-width: 805px){
+
+  .body {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 714px;
+    margin-left: 27px;
+    margin-right: 27px;
+  }
+}
+
+
+
+@media (max-width: 400px){
+
+  .body {
+    max-width: 320px;
+    min-width: 290px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 278px;
+    margin-left: 21px;
+    margin-right: 21px;
+  }
+}
+
+

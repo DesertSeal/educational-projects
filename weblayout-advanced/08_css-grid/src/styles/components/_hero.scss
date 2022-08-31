@@ -1,0 +1,365 @@
+@import '../variables';
+
+.hero {
+ 	margin-bottom: 63px;
+	
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		// grid-template-rows: minmax(630px, 1fr);
+		grid-template-rows: auto;
+		gap: 30px;
+	}
+
+	&__left {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+    	
+		margin: 0 0 0 0;	
+		width: 100%;
+		height: 99.3%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		
+		background: url(../images/1920/lens.jpg) no-repeat;
+		background-position: 0px bottom;
+		background-size: cover;
+	}
+ 	&-left {
+
+		&__teg {
+			display: inline-block;
+			padding: 7px 15px;
+			margin: 15px 15px 57.2% auto;
+		}
+
+		&__subtitle {
+			margin: 0px 5px 3px 59px;
+			font-family: RobotoRegular;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 19px;
+			letter-spacing: 0;
+			color: $colorwhite;
+		}
+
+		&__title {
+			margin: 0 5px 20px 59px;
+			font-family: "TTFirsNeueBold";
+			line-height: 37px;
+			font-weight: 700;
+			font-size: 36px;
+			font-style: normal;
+			letter-spacing: 0em;
+			color: $colorwhite;
+		}
+	}
+
+	&__button {
+		// position: absolute;
+    	// bottom: 66px;
+    	// left: 60px;
+		margin: 0 0 10px 60px;
+    	padding: 15.5px 22.5px;
+
+		transition: 0.3s ease;
+
+		&:hover {
+			background-color: $colorFocus;
+		}
+
+		&:active {
+			border-color: transparent;
+			background-color: $colorActive;
+		}
+
+		&:focus {
+			background-color: $colorOrange;
+			border-color: $colorActive;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		margin-top: -5px;
+	}
+
+	&__right {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2; 
+		}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	    // grid-template-rows: 300px 257px;
+    	  grid-template-rows:  auto auto;
+		
+    	column-gap: 30px;
+    	row-gap: 26px;
+	}
+
+	&__item-1 {
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+
+	&__item-2 {
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+	}
+
+	&__item-3 {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+
+
+
+
+}
+
+@media (max-width: 1120px) {
+	.hero {
+		&-left {
+			&__title{
+				font-size: 34px;
+			}
+			&__title,
+			&__subtitle {
+				margin-left: 30px;
+			}
+		}
+		&__button {
+			margin-left: 30px;
+		}
+	}
+
+}
+
+@media (max-width: 1050px) {
+	.hero {
+		margin-bottom: 63px;
+
+		&__left {
+			background: url(../images/1024/lens.jpg) no-repeat;
+			height: 100.3%;
+			margin-top: -6px;
+		}
+
+		&-left {
+			&__teg {
+				top: 15px;
+				margin-bottom: 82%;
+			}
+			&__subtitle {
+				margin-bottom: 8px;
+			}
+	
+			&__title {
+				line-height: 34px;
+			}
+		}
+
+		&__right {
+			margin-top: 0px;
+		}
+
+
+		&__button {
+			letter-spacing: unset; 
+			padding: 16px 22px 16px 22px;
+		}
+
+		
+	}
+}
+
+@media (max-width: 980px) {
+	.hero {
+		&__title {
+			font-size: 22px;
+			line-height: 23px;
+			margin-top: -2px;
+			margin-bottom: 17px;
+		}
+
+		&-left {
+			&__teg {
+				margin-bottom: 52.3%;
+			}
+			&__title {
+				line-height: 31px;
+				margin: 0 10px 23px 28px;
+				
+			}
+			&__subtitle {
+				margin: 0px 0px 14px 28px;
+			}
+		}
+		&__button {
+			margin-left: 30px;
+			padding: 16px 22px 15px 22px;
+		}
+	}
+}
+
+
+
+@media (max-width: 805px) {
+	.hero {
+
+		&__left {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+			padding-top: 0px;
+			margin-top: -2px;
+			background: url(../images/768/lens.jpg) no-repeat;
+		}
+		&-left {
+			&__teg {
+				margin-bottom: 52%;
+			}
+		}
+
+		&__title {
+			font-size: 22px;
+			line-height: 23px;
+			margin-top: -2px;
+			margin-bottom: 17px;
+		}
+		
+		&__right {
+			grid-column: 2 / 3;
+			grid-row: 1 / 2;
+			margin-top: -2px;
+		}
+	}
+}
+
+@media (max-width: 655px) {
+	.hero {
+
+		&-left {
+			&__teg {
+				margin-bottom: 53.5%;
+			}
+			&__title {
+				margin: 0 10px 13px 28px;
+				font-size: 24px;
+				line-height: 26px;
+			}
+			&__subtitle {
+				margin: 0px 0px 14px 28px;
+				font-size: 14px;
+				line-height: 16px;
+			}
+		}
+		&__button {
+			margin-left: 28px;
+			padding: 11px 23px 10px 22px;
+			font-size: 14px;
+		}
+	}
+
+}
+
+@media (max-width: 580px) {
+ 	.hero {
+ 		margin-bottom: 45px;
+
+		&__grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			// grid-template-rows: 422px 58px 321px;
+			grid-template-rows: auto auto auto;
+			gap: 21px;
+		}
+
+		&__left {
+
+			background: url(../images/320/lens.jpg) no-repeat;
+			background-size: cover;
+
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+
+			margin-top: 0px;
+			padding-top: 4px;
+		}
+
+		&-left {
+			&__teg {
+				font-size: 12px;
+				padding: 3px 8px;
+				margin: 2px 6px 74% auto;
+			}
+
+			&__subtitle {
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+
+			&__title {
+				font-size: 24px;
+				line-height: 26px;
+				// width: 94%;
+				padding-right: 5px;
+				margin-bottom: 14px;
+			}
+		}
+
+		&__button {
+			padding: 11px 23px 10px 22px;
+			font-size: 14px;
+			margin-bottom: 29px;
+			margin-left: 30px;
+		}
+
+
+		&__title {
+			font-size: 18px;
+			line-height: 19px;
+			width: 100%;
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+
+
+		&__right {
+			grid-column: 1 / 3;
+			grid-row: 2 / 4;
+			margin-top: -2px;
+		}
+
+		&__right_grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			// grid-template-rows: 186px 105px;
+			grid-template-rows: auto auto;
+			gap: 30px;
+		}
+
+		&__list {
+			row-gap: 26px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		&__item-3 {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+ 	}
+}

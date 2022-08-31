@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+	<!-- <link rel="shortcut icon" href="favicon.svg" type="image/x-icon"> -->
+	<link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+	<title>CSS GRID</title>
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш%20API-ключ&lang=ru_RU"></script>
+	<!-- <script src="js/just-validate3.3.3.min.js"></script> -->
+	<script defer src="js/app.js">  </script>
+
+
+</head>
+
+<body class="body">
+	<h1 hidden>High pass</h1>
+	<header class="header">
+		<div class="container header__grid">
+			<div class="header__logo-cell">
+				<div class="header__logo-line">
+					<img class="header__logo" src="images/logo.png" alt="Логотип компании">
+					<img class="header__name" src="images/High_pass.png" alt="Название компании">
+				</div>
+			</div>
+			<nav class="header__nav menu">
+        <button class="button-reset button-close burger-close"></button>
+				<ul class="header__list">
+					<li class="header__item">
+						<a class="header__link" href="#about">О студии</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#projects">Наши проекты</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#services">Услуги</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#master_classes">Мастер-классы</a>
+					</li>
+					<li class="header__item">
+						<a class="header__link" href="#contacts">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+
+			<button class="button-reset burger">
+				<span class="burger__line"></span>
+			</button>
+
+			<div class="header__social social">
+				
+					<a class="social__inst" href="#">
+						<svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="link-inst" d="M12.129 15a2.871 2.871 0 105.742 0 2.871 2.871 0 00-5.742 0z" fill="#CACACA" />
+							<path class="link-inst"
+								d="M8.286 9.92c.138-.374.358-.712.644-.99.278-.286.616-.507.99-.645.304-.118.76-.258 1.6-.296.908-.041 1.18-.05 3.48-.05s2.573.008 3.48.05c.84.038 1.297.178 1.6.296.374.138.713.359.99.645.286.278.506.616.645.99.118.303.258.76.296 1.6.042.908.05 1.18.05 3.48s-.008 2.572-.05 3.48c-.038.84-.178 1.296-.296 1.6a2.67 2.67 0 01-.645.99 2.667 2.667 0 01-.99.645c-.303.118-.76.258-1.6.296-.907.042-1.18.05-3.48.05s-2.572-.008-3.48-.05c-.84-.038-1.296-.178-1.6-.296a2.852 2.852 0 01-1.634-1.635c-.118-.304-.259-.76-.297-1.6-.041-.908-.05-1.18-.05-3.48s.009-2.572.05-3.48c.038-.84.178-1.296.297-1.6zM15 19.423a4.423 4.423 0 100-8.846 4.423 4.423 0 000 8.846zm-4.598-7.987a1.034 1.034 0 100-2.068 1.034 1.034 0 000 2.068z"
+								fill="#CACACA" />
+							<path class="link-inst"
+								d="M15 0c8.283 0 15 6.717 15 15 0 8.283-6.717 15-15 15-8.283 0-15-6.717-15-15C0 6.717 6.717 0 15 0zM6.439 18.551c.041.917.187 1.543.4 2.09a4.404 4.404 0 002.52 2.52c.547.213 1.173.358 2.09.4.918.042 1.212.052 3.55.052 2.34 0 2.633-.01 3.552-.052.917-.042 1.543-.187 2.09-.4a4.22 4.22 0 001.526-.994c.438-.43.777-.95.994-1.525.213-.548.358-1.174.4-2.09.042-.92.052-1.213.052-3.552 0-2.34-.01-2.633-.052-3.551-.041-.917-.187-1.543-.4-2.09a4.22 4.22 0 00-.994-1.526 4.218 4.218 0 00-1.525-.994c-.548-.213-1.174-.358-2.09-.4-.92-.042-1.213-.052-3.552-.052-2.34 0-2.633.01-3.551.052-.917.042-1.543.187-2.09.4a4.222 4.222 0 00-1.527.994 4.22 4.22 0 00-.993 1.525c-.213.548-.359 1.174-.4 2.09-.042.92-.052 1.213-.052 3.552 0 2.34.01 2.633.052 3.551z"
+								fill="#CACACA" />
+						</svg>
+					</a>
+					<a class="social__fb" href="#">
+						<svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="link-fb"
+								d="M15 0C6.75 0 0 6.762 0 15.09 0 22.62 5.49 28.87 12.66 30V19.458H8.85V15.09h3.81v-3.328c0-3.78 2.235-5.858 5.67-5.858 1.635 0 3.345.286 3.345.286v3.72h-1.89c-1.86 0-2.445 1.16-2.445 2.349v2.831h4.17l-.675 4.368H17.34V30a14.985 14.985 0 009.075-5.105A15.097 15.097 0 0030 15.09C30 6.762 23.25 0 15 0z"
+								fill="#CACACA" />
+						</svg>
+					</a>
+					<a href="#">
+						<svg class="social__wk" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path class="link-wk"
+								d="M15 0C6.716 0 0 6.716 0 15c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15zm7.609 16.622c.699.683 1.439 1.326 2.066 2.08.278.333.54.677.74 1.065.285.553.027 1.159-.467 1.192l-3.073-.001c-.794.066-1.426-.255-1.958-.797-.425-.433-.82-.894-1.229-1.342a2.871 2.871 0 00-.553-.492c-.42-.272-.783-.189-1.023.249-.245.445-.3.939-.324 1.434-.033.725-.252.914-.979.948-1.554.073-3.028-.163-4.398-.946-1.208-.69-2.144-1.666-2.959-2.77-1.587-2.152-2.803-4.514-3.895-6.944-.246-.547-.066-.84.538-.85a85.522 85.522 0 013.009-.002c.408.007.678.24.835.625.542 1.334 1.206 2.603 2.039 3.78.222.313.448.625.77.846.357.245.628.164.796-.233.107-.253.154-.523.177-.794.08-.927.09-1.854-.049-2.777-.086-.578-.41-.951-.987-1.06-.293-.056-.25-.165-.108-.332.248-.29.48-.47.944-.47h3.472c.547.107.67.353.744.904l.003 3.859c-.006.213.107.845.49.985.307.101.51-.145.693-.34.833-.883 1.426-1.926 1.957-3.005.235-.476.437-.969.634-1.462.146-.365.373-.545.785-.539l3.343.004c.099 0 .199.001.296.018.564.097.718.339.544.889-.275.863-.808 1.583-1.329 2.304-.558.772-1.154 1.517-1.707 2.293-.508.709-.468 1.066.163 1.681z"
+								fill="#CACACA" />
+						</svg>
+					</a>
+				
+			</div>
+
+			<button class="header__search">
+				<svg width="25" height="25">
+					<use href="images/sprite.svg#search" />
+				</svg>
+			</button>
+
+			<form class="search">
+				<button class="button-reset search__icon">
+					<svg style="display: none;" width="20" height="20">
+						<use xlink:href="images/sprite.svg#search_white"></use>
+					</svg>
+				</button>
+				<input type="text" class="input-reset search__input" placeholder="Что будем искать?">
+				<button class="button-reset button-close search__close"></button>
+			</form>
+
+		</div>
+	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container hero__grid">
+      	<div class="hero__left hero-left">
+            <div class="hero-left__teg teg">#мастеркласс</div>
+            <h3 class="hero-left__subtitle">Мастер-класс от Игоря Робова</h3>
+            <h2 class="hero-left__title">Неоновый <span style="white-space: nowrap">фотосет 2.0</span><br>7 июля 20:00</h2>        
+            <a href="" class="button-reset button button_orange hero__button">Узнать больше</a>
+				</div>
+        
+				<div class="hero__right">
+					<h3 class="title title_darc hero__title">Работы участников предыдущего мастер-класса</h3>
+					<ul class="hero__list">
+						<li class="hero__item-1">
+							<picture>
+								<source srcset="images/320/girl-1.jpg" media="(max-width: 400px)">
+								<source srcset="images/768/girl-1.jpg" media="(max-width: 805px)">
+								<source srcset="images/1024/girl-1.jpg" media="(max-width: 1050px)">
+								<source srcset="images/1920/girl-1.jpg" media="(max-width: 1920px)">
+								<img src="images/1920/girl-1.jpg" alt="Фотография девушки 1">
+							</picture>
+						</li>
+						<li class="hero__item-2">
+							<picture>
+								<source srcset="images/320/girl-3.jpg" media="(max-width: 400px)">
+								<source srcset="images/768/girl-3.jpg" media="(max-width: 805px)">
+								<source srcset="images/1024/girl-3.jpg" media="(max-width: 1050px)">
+								<source srcset="images/1920/girl-3.jpg" media="(max-width: 1920px)">
+								<img class="hero__img" src="images/1920/girl-3.jpg" alt="Фотография девушки 2">
+							</picture>
+						</li>
+						<li class="hero__item-3">
+							<picture>
+								<source srcset="images/320/girl-2.jpg" media="(max-width: 400px)">
+								<source srcset="images/768/girl-2.jpg" media="(max-width: 805px)">
+								<source srcset="images/1024/girl-2.jpg" media="(max-width: 1050px)">
+								<source srcset="images/1920/girl-2.jpg" media="(max-width: 1920px)">
+								<img src="images/1920/girl-2.jpg" alt="Фотография девушки 3">
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</section>
+
+
+
+	 	<section class="about" id="about">
+			<div class="container">
+				<h2 class="title title_light about__title">О студии</h2>
+
+        <div class="about__grid">
+          <p class="work-text work-text_light about__text">В рамках спецификации современных стандартов, интерактивные прототипы,
+            инициированные исключительно синтетически, ограничены исключительно образом мышления.
+            Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от
+            нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних
+            противодействий&nbsp;&nbsp;фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно,
+            граница обучения кадров предоставляет широкие возможности для первоочередных требований.
+            Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы
+            реализации новых принципов формирования <span style="white-space: nowrap;">материально-технической</span> и кадровой базы. Приятно,
+            граждане, наблюдать, как явные признаки институционализации являются только методом политического
+            участия и нарушающими общечеловеческие нормы этики.</p>
+  
+          <div class="about__grid-right">
+            <picture class="about__photo">
+              <source srcset="images/320/photocamera.jpg" media="(max-width: 400px)">
+              <source srcset="images/768/photocamera.jpg" media="(max-width: 805px)">
+              <source srcset="images/1024/photocamera.jpg" media="(max-width: 1050px)">
+              <source srcset="images/1920/photocamera.jpg" media="(max-width: 1950px)">
+              <img src="images/1920/photocamera.jpg" alt="Фотоаппарат">
+            </picture>
+        
+            <form action="#" class="about__form">
+              <label for="about__input" class="about__label">Подписаться на рассылку</label>
+              <div class="about__sendEmail">
+                <input type="email" name="email" id="about__input"
+                  class="input-reset about__input" placeholder="E-mail">
+                <button class="button-reset button button_orange about__button ">Отправить</button>
+              </div>
+            </form>
+          </div>  
+
+        </div>
+
+			</div>
+		</section>
+
+
+
+		<section class="projects container" id="projects">
+			<h2 class="title title_darc projects__title ">Наши проекты</h2>
+			<ul class="projects__grid">
+				<li class="projects__item-1">
+					<figure class="projects__figure">
+						<picture>
+							<source srcset="images/320/landscape.jpg" media="(max-width: 400px)">
+							<source srcset="images/768/landscape.jpg" media="(max-width: 805px)">
+							<source srcset="images/1024/landscape.jpg" media="(max-width:1050px)">
+							<source srcset="images/1920/landscape.jpg" media="(max-width: 1920px)">
+							<img src="images/1920/landscape.jpg" alt="" class="projects__img-1">
+						</picture>
+						<figcaption class="projects__figcaption">
+							<div class="projects__caption-1">Синтетически, смешаны с не уникальными данными до
+								степени...</div>
+							<div class="projects__date">
+								<svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#calendar" />
+								</svg>
+								<span class="projects__calendar">16 июня</span>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="projects__teg teg">#пейзаж</div>
+				</li>
+				<li class="projects__item-2">
+					<figure class="projects__figure">
+						<picture>
+							<source srcset="images/320/portrait.jpg" media="(max-width: 400px)">
+							<source srcset="images/768/portrait.jpg" media="(max-width: 805px)">
+							<source srcset="images/1024/portrait.jpg" media="(max-width:1050px)">
+							<source srcset="images/1920/portrait.jpg" media="(max-width: 1920px)">
+							<img src="images/1920/portrait.jpg" alt=""  class="projects__img-2">
+						</picture>
+						<figcaption class="projects__figcaption">
+							<span class="projects__caption-2">В своём стремлении улучшить опыт мы упускаем, что
+								явные...</span>
+							<div class="projects__date">
+								<svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#calendar" />
+								</svg>
+								<span class="projects__calendar">28 мая</span>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="projects__teg teg">#портрет</div>
+				</li>
+				<li class="projects__item-3">
+					<figure class="projects__figure">
+						<picture>
+							<source srcset="images/320/object.jpg" media="(max-width: 400px)">
+							<source srcset="images/768/object.jpg" media="(max-width: 805px)">
+							<source srcset="images/1024/object.jpg" media="(max-width: 1192px)">
+							<source srcset="images/1920/object.jpg" media="(max-width: 1920px)">
+							<img src="images/1920/object.jpg" alt="" class="projects__img-3">
+						</picture>
+						<figcaption class="projects__figcaption">
+							<span class="projects__caption-3">Равным образом, высокое качество позиционных
+								высокотехнологичная концепция общественного уклада</span>
+							<div class="projects__date">
+								<svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#calendar" />
+								</svg>
+								<span class="projects__calendar">14 мая</span>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="projects__teg teg">#предмет</div>
+				</li>
+				<li class="projects__item-4">
+          <div class="projects__teg teg">#fuji</div>
+          <div class="projects__date projects__big-date">
+            <svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+              <use href="images/sprite.svg#calendar_white" />
+            </svg>
+            <span class="projects__calendar projects__big-calendar">9 апреля</span>
+          </div>
+          <h2 class="projects__big-title">Cемантический разбор</h2>
+          <p class="projects__big-text">В рамках спецификации современных стандартов,
+            интерактивные прототипы</p>
+          <button class="button-reset button button_transparent projects__button projects__button_1">О проекте</button>
+
+
+        </li>
+				<li class="projects__item-5">
+					<div class="projects__teg teg">#проектзабвение</div>
+          <div class="projects__date projects__big-date">
+            <svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+              <use href="images/sprite.svg#calendar_white" />
+            </svg>
+            <span class="projects__calendar projects__big-calendar">20 марта</span>
+          </div>
+          <h2 class="projects__big-title">Забвение</h2>
+          <p class="projects__big-text">Играет важную роль в формировании глубокомысленных
+            рассуждений</p>
+					<button class="button-reset button button_transparent projects__button projects__button_2">О проекте</button>
+				</li>
+				<li class="projects__item-6">
+					<figure class="projects__figure">
+						<picture>
+							<source srcset="images/320/retouching.jpg" media="(max-width: 400px)">
+							<source srcset="images/768/retouching.jpg" media="(max-width: 805px)">
+							<source srcset="images/1024/retouching.jpg" media="(max-width: 1050px)">
+							<source srcset="images/1920/retouching.jpg" media="(max-width: 1920px)">
+							<img src="images/1920/retouching.jpg" alt=""  class="projects__img-6">
+						</picture>
+						<figcaption class="projects__figcaption">
+							<span class="projects__caption-6">Как принято считать, многие известные личности и по сей
+								день остаются уделом либералов...</span>
+							<div class="projects__date">
+								<svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#calendar" />
+								</svg>
+								<span class="projects__calendar">9 марта</span>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="projects__teg teg">#ретушь</div>
+				</li>
+
+
+
+				<li class="projects__item-7">
+					<figure class="projects__figure">
+						<picture>
+							<source srcset="images/320/portrait-girl.jpg" media="(max-width: 400px)">
+							<source srcset="images/768/portrait-girl.jpg" media="(max-width: 805px)">
+							<source srcset="images/1024/portrait-girl.jpg" media="(max-width: 1050px)">
+							<source srcset="images/1920/portrait-girl.jpg" media="(max-width: 1920px)">
+							<img src="images/1920/portrait-girl.jpg" alt=""  class="projects__img-7">
+						</picture>
+						<figcaption class="projects__figcaption">
+							<span class="projects__caption-7">С учётом сложившейся международной обстановки, новая модель
+								организационной...</span>
+							<div class="projects__date">
+								<svg width="12" height="14" viewbox="0 0 12 14" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#calendar" />
+								</svg>
+								<span class="projects__calendar">1 марта</span>
+							</div>
+						</figcaption>
+					</figure>
+					<div class="projects__teg teg">#портрет</div>
+				</li>
+
+			</ul>
+
+		</section>
+
+		<section class="container contacts">
+			<h2 class=" title title_darc contacts__title">Контакты</h2>
+			<div id="contacts" class="contacts__grid">
+          <div id="map" class="container__map"></div>
+				<div class="adress">
+					<button class="button-reset button-close adress__close"></button>
+					<div class="adress__container">
+						<h3 class="adress__title">Студия “High pass”</h3>
+						<div class="adress__undertitle">
+							<p class="adress__adress">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев
+								Плаза», этаж 8, офис № 82</p>
+							<div class="adress__tel">
+								<svg class="adress__tel-svg" width="16.5" height="17.5" viewbox="0 0 16.5 17.5" xmlns="http://www.w3.org/2000/svg">
+									<use href="images/sprite.svg#handset" />
+								</svg>
+								<a href="tel:+749542423532" class="adress__tel-link link-reset"> +7 (495)
+									42-423-532</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__callback callback">
+					<h3 class="title title_darc callback__title ">Оставить заявку</h3>
+					<p class="callback__description description">Оставьте ваши данные, указав в графе “Комментарий”
+						желаемые время и дату съемки или другого мероприятия</p>
+					<form action="#" method="POST" class="callback__form">
+						<div class="form-group">
+							<input type="text" name="Имя" class="callback__input input-reset name-input" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="callback__input input-reset email-input" placeholder="E-mail">
+						</div>
+						<textarea cols="30" rows="10" name="Сообщение" class="callback__textarea input-reset"
+							placeholder="Комментарий"></textarea>
+						<button class="button-reset button button_orange callback__button">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container footer__grid">
+			<div class="footer__logo-cell">
+        <div class="footer__logo-line">
+          <img class="footer__logo-img" src="images/logo.png" alt="Логотип компании">
+          <img class="footer__logo-name" src="images/High_pass.png" alt="Название компании">
+        </div>
+        <p class="footer__logo-description">Фотостудия High pass® 2018-2020</p>
+			</div>
+			<div class="citata">
+        <p class="citata__text">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять
+          завтра. <br /><span class="citata__autor">© Имоджен Каннингем</span></p>
+      </div>
+      <div class="footer__social social">
+        <p class="footer__social-description">Больше интересного:</p>
+        <div class="footer__social-link">
+          <a class="social__inst" href="#">
+            <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="link-inst" d="M12.129 15a2.871 2.871 0 105.742 0 2.871 2.871 0 00-5.742 0z" fill="#CACACA" />
+              <path class="link-inst"
+              d="M8.286 9.92c.138-.374.358-.712.644-.99.278-.286.616-.507.99-.645.304-.118.76-.258 1.6-.296.908-.041 1.18-.05 3.48-.05s2.573.008 3.48.05c.84.038 1.297.178 1.6.296.374.138.713.359.99.645.286.278.506.616.645.99.118.303.258.76.296 1.6.042.908.05 1.18.05 3.48s-.008 2.572-.05 3.48c-.038.84-.178 1.296-.296 1.6a2.67 2.67 0 01-.645.99 2.667 2.667 0 01-.99.645c-.303.118-.76.258-1.6.296-.907.042-1.18.05-3.48.05s-2.572-.008-3.48-.05c-.84-.038-1.296-.178-1.6-.296a2.852 2.852 0 01-1.634-1.635c-.118-.304-.259-.76-.297-1.6-.041-.908-.05-1.18-.05-3.48s.009-2.572.05-3.48c.038-.84.178-1.296.297-1.6zM15 19.423a4.423 4.423 0 100-8.846 4.423 4.423 0 000 8.846zm-4.598-7.987a1.034 1.034 0 100-2.068 1.034 1.034 0 000 2.068z"
+              fill="#CACACA" />
+              <path class="link-inst"
+              d="M15 0c8.283 0 15 6.717 15 15 0 8.283-6.717 15-15 15-8.283 0-15-6.717-15-15C0 6.717 6.717 0 15 0zM6.439 18.551c.041.917.187 1.543.4 2.09a4.404 4.404 0 002.52 2.52c.547.213 1.173.358 2.09.4.918.042 1.212.052 3.55.052 2.34 0 2.633-.01 3.552-.052.917-.042 1.543-.187 2.09-.4a4.22 4.22 0 001.526-.994c.438-.43.777-.95.994-1.525.213-.548.358-1.174.4-2.09.042-.92.052-1.213.052-3.552 0-2.34-.01-2.633-.052-3.551-.041-.917-.187-1.543-.4-2.09a4.22 4.22 0 00-.994-1.526 4.218 4.218 0 00-1.525-.994c-.548-.213-1.174-.358-2.09-.4-.92-.042-1.213-.052-3.552-.052-2.34 0-2.633.01-3.551.052-.917.042-1.543.187-2.09.4a4.222 4.222 0 00-1.527.994 4.22 4.22 0 00-.993 1.525c-.213.548-.359 1.174-.4 2.09-.042.92-.052 1.213-.052 3.552 0 2.34.01 2.633.052 3.551z"
+              fill="#CACACA" />
+            </svg>
+          </a>
+          <a class="social__fb" href="#">
+            <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="link-fb"
+              d="M15 0C6.75 0 0 6.762 0 15.09 0 22.62 5.49 28.87 12.66 30V19.458H8.85V15.09h3.81v-3.328c0-3.78 2.235-5.858 5.67-5.858 1.635 0 3.345.286 3.345.286v3.72h-1.89c-1.86 0-2.445 1.16-2.445 2.349v2.831h4.17l-.675 4.368H17.34V30a14.985 14.985 0 009.075-5.105A15.097 15.097 0 0030 15.09C30 6.762 23.25 0 15 0z"
+              fill="#CACACA" />
+            </svg>
+          </a>
+          <a class="social__wk" href="#">
+            <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="link-wk"
+              d="M15 0C6.716 0 0 6.716 0 15c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15zm7.609 16.622c.699.683 1.439 1.326 2.066 2.08.278.333.54.677.74 1.065.285.553.027 1.159-.467 1.192l-3.073-.001c-.794.066-1.426-.255-1.958-.797-.425-.433-.82-.894-1.229-1.342a2.871 2.871 0 00-.553-.492c-.42-.272-.783-.189-1.023.249-.245.445-.3.939-.324 1.434-.033.725-.252.914-.979.948-1.554.073-3.028-.163-4.398-.946-1.208-.69-2.144-1.666-2.959-2.77-1.587-2.152-2.803-4.514-3.895-6.944-.246-.547-.066-.84.538-.85a85.522 85.522 0 013.009-.002c.408.007.678.24.835.625.542 1.334 1.206 2.603 2.039 3.78.222.313.448.625.77.846.357.245.628.164.796-.233.107-.253.154-.523.177-.794.08-.927.09-1.854-.049-2.777-.086-.578-.41-.951-.987-1.06-.293-.056-.25-.165-.108-.332.248-.29.48-.47.944-.47h3.472c.547.107.67.353.744.904l.003 3.859c-.006.213.107.845.49.985.307.101.51-.145.693-.34.833-.883 1.426-1.926 1.957-3.005.235-.476.437-.969.634-1.462.146-.365.373-.545.785-.539l3.343.004c.099 0 .199.001.296.018.564.097.718.339.544.889-.275.863-.808 1.583-1.329 2.304-.558.772-1.154 1.517-1.707 2.293-.508.709-.468 1.066.163 1.681z"
+              fill="#CACACA" />
+            </svg>
+          </a>
+        </div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

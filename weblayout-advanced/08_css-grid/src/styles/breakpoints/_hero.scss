@@ -1,0 +1,296 @@
+@import '../variables';
+
+// @media (max-width: 1100px) {
+//     .hero {
+
+//         &__titleblock{
+//             left: 30px;
+//         }
+
+//         &__subtitle {
+//             // left: 30px;
+//         }
+
+//         &__title {
+//             // left: 30px;
+//             font-size: 34px;
+//         }
+
+//         &__button{
+//             left: 30px;  
+//             letter-spacing: 0.3px;      
+//             padding: 13px 21px 13px 21px;   
+//         }
+//     }
+// }
+
+
+@media (max-width: 1100px) {
+	.hero {
+		margin-bottom: 66px;
+
+		&__grid-8 {
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: 50px 332px 186px;
+			gap: 30px;
+		}
+
+
+		&__heading {
+			grid-column: 5 / 9;
+			grid-row: 1 / 2;
+		}
+
+		&__left {
+			grid-column: 1 / 5;
+			grid-row: 1 / 4;
+
+			padding-top: 4px;
+		}
+
+		&__right {
+			grid-column: 5 / 9;
+			grid-row: 2 / 4;
+			margin-top: -2px;
+		}
+
+		&__right_grid-4 {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 332px 186px;
+			gap: 30px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 5;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+		}
+
+		&__item-3 {
+			grid-column: 3 / 5;
+			grid-row: 2 / 3;
+		}
+
+		&__teg {
+			top: 18px;
+		}
+
+		&__titleblock {
+			bottom: 103px;
+			left: 30px;
+		}
+
+		&__subtitle {
+			// bottom: 164px;
+			margin-bottom: 8px;
+		}
+
+		&__title {
+			// bottom: 74px;
+			line-height: 34px;
+			font-size: 34px;
+		}
+
+		&__button {
+			// left: 30px;  
+			letter-spacing: 0.3px;
+			padding: 13px 21px 13px 21px;
+			left: 29px;
+			bottom: 32px;
+
+		}
+	}
+}
+
+
+
+
+@media (max-width: 805px) {
+	.hero {
+		margin-bottom: 69px;
+
+		&__grid-6 {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: 38px 225px 133px;
+			gap: 30px;
+		}
+
+
+		&__heading {
+			grid-column: 4 / 7;
+			grid-row: 1 / 2;
+
+			font-size: 22px;
+			letter-spacing: 1.1px;
+			line-height: 22px;
+		}
+
+		&__left {
+			grid-column: 1 / 4;
+			grid-row: 1 / 4;
+
+			padding-top: 4px;
+		}
+
+
+		&__right {
+			grid-column: 4 / 7;
+			grid-row: 2 / 4;
+			margin-top: -2px;
+		}
+
+		&__right_grid-6 {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: 228px 133px;
+			gap: 30px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 7;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 1 / 4;
+			grid-row: 2 / 3;
+		}
+
+		&__item-3 {
+			grid-column: 4 / 7;
+			grid-row: 2 / 3;
+		}
+
+		&__teg {
+			top: 20px;
+		}
+
+		&__subtitle {
+			bottom: 193px;
+		}
+
+		&__title {
+			bottom: 72px;
+			line-height: 31px;
+			left: 28px;
+		}
+
+		&__button {
+			left: 30px;
+			bottom: 29px;
+		}
+
+
+	}
+}
+
+@media (max-width: 610px) {
+	.hero {
+		&__subtitle {
+			font-size: 14px;
+		}
+
+		&__title {
+			font-size: 24px;
+			line-height: 26px;
+		}
+	}
+}
+
+
+@media (max-width: 610px) {
+	.hero {
+		margin-bottom: 47px;
+
+		&__grid-2 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 422px 58px 321px;
+			gap: 16px;
+		}
+
+		&__left {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+
+			padding-top: 0px;
+		}
+
+		&__teg {
+			top: 6px;
+			right: 5px;
+			width: 95px;
+			height: 22px;
+			font-size: 12px;
+			padding: 3px 8px;
+		}
+
+		&__titleblock {
+			bottom: 85px;
+		}
+
+		&__subtitle {
+			// bottom: 156px;
+			font-size: 14px;
+		}
+
+		&__title {
+			// bottom: 64px;
+			font-size: 24px;
+			line-height: 26px;
+			width: 180px;
+		}
+
+		&__button {
+			bottom: 30px;
+			padding: 7px 22px 8px 19px;
+			font-size: 14px;
+		}
+
+		&__heading {
+			grid-column: 1 / 3;
+			grid-row: 2 / 3;
+
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 19px;
+			letter-spacing: 0.85px;
+			margin-top: 19px;
+		}
+
+		&__right {
+			grid-column: 1 / 3;
+			grid-row: 3 / 4;
+			margin-top: -2px;
+		}
+
+		&__right_grid-2 {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 186px 105px;
+			gap: 30px;
+		}
+
+		&__item-1 {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+		}
+
+		&__item-2 {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		&__item-3 {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+* {
+    text-align: center;
+    font-family: "Comic Sans MS";
+}
+
+button {
+    display: block;
+    margin: 50px auto;
+    background-color: #c6ffff;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 11px 25px;
+    font-size: 20px;
+    cursor: pointer
+}
+
+input {
+    text-align: center;
+    margin: auto 10px;
+    outline: none;
+    border: 1px solid blue;
+    border-radius: 5px;
+    height: 50px;
+    width: 80px;
+    font-size: 20px;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    border: 5px solid white;
+    background-color: #c6ffff;
+    cursor: pointer
+}
+
+.divNumberCards,
+.divPlayAgainForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divPlayAgainForm {
+    margin-top: 100px;
+}
+
+.divPlayAgainButton {
+    margin: 0px 30px;
+}
+
+h2 {
+    width: 400px;
+}
+
+h1 {
+    font-size: 55px;
+}
